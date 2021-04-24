@@ -1,0 +1,18 @@
+
+{% load static %}
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'book/style.css' %}">
+  </head>
+  <body>
+
+    <ul>
+    {% for books in all_book %}
+    <li><a href="/book/{{books.id}}/">{{books.name}}</a></li>
+    {% endfor %}
+    </ul>
+
+
+  </body>
+</html>
